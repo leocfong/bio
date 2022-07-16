@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <unordered_set>
 #include <algorithm>
 using namespace std;
 template<typename T>
@@ -154,4 +155,51 @@ bool Add(vector<T>& set, vector<T>& add)
         set.push_back(*it);
     }
     return true;
+}
+
+//add set to vector
+template<typename T>
+vector<T> Accumulate(vector<T>& set)
+{
+    T acc = 0; vector<T> accvec;
+    size_t set_size = set.size();
+    for (int i = 0; i < set_size; i++)
+    {
+       T newVal = set[i] + acc;
+       accvec.push_back(newVal);
+       acc = newVal;
+
+    }
+    return accvec;
+
+}
+template<typename T>
+void RemoveDuplicate(vector<T>& v)
+{
+    std::unordered_set<int> s(v.begin(), v.end());
+    v.assign(s.begin(), s.end());
+}
+
+template<typename T>
+vector<T> Merge(vector<T>& setA, vector<T>& setB)
+{
+    vector<T> m;
+    Add(m, setA);
+    Add(m, setB);
+    RemoveDuplicate(m);
+    sort(m.begin(), m.end());
+    return m;
+}
+//add set to vector
+template<typename T>
+vector<T> FindFragments(vector<T>& set)
+{
+    vector<T> f;
+    size_t set_size = set.size();
+    f.push_back(set[0]);
+    for (size_t i = 1; i < set_size; i++) {
+        int g = set[i] - set[i - 1];
+        f.push_back(g);
+    }
+    return f;
 }

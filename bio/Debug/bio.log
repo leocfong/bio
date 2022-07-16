@@ -1,7 +1,5 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ConsoleApplication1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(514,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ConsoleApplication1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   main.cpp
-  digest.cpp
-C:\Work9\bio\bio\digest.cpp(10,23): warning C4018: '<': signed/unsigned mismatch
-  Util.cpp
-  Generating Code...
+C:\Work9\bio\bio\Util.h(166,23): warning C4018: '<': signed/unsigned mismatch
+C:\Work9\bio\bio\main.cpp(37): message : see reference to function template instantiation 'std::vector<int,std::allocator<int>> Accumulate<int>(std::vector<int,std::allocator<int>> &)' being compiled
   bio.vcxproj -> C:\Work9\bio\Debug\bio.exe
