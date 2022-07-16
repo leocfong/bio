@@ -1,0 +1,7 @@
+﻿  main.cpp
+C:\Users\fongl\OneDrive\Work\bio\bio\main.cpp(29,26): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\fongl\OneDrive\Work\bio\bio\main.cpp(30,26): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\fongl\OneDrive\Work\bio\bio\main.cpp(31,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\fongl\OneDrive\Work\bio\bio\Util.h(54,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\fongl\OneDrive\Work\bio\bio\main.cpp(14): message : see reference to function template instantiation 'void Render<int>(std::vector<int,std::allocator<int>> &)' being compiled
+  bio.vcxproj -> C:\Users\fongl\OneDrive\Work\bio\x64\Debug\bio.exe
