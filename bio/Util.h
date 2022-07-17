@@ -5,7 +5,7 @@
 #include <algorithm>
 using namespace std;
 template<typename T>
-//insert unique value into a vector
+//insert unique value into a vector 
 void InsertUnique(vector<T>& v, T newValue)
 {
     if (std::find(v.begin(), v.end(), newValue) == v.end()) {
@@ -51,7 +51,7 @@ void Render(T* arr, size_t n)
 }
 //render vector
 template<typename T>
-void Render(std::vector<T>& v)
+void Render(const std::vector<T>& v)
 {
     
     int vsize = v.size();
@@ -70,7 +70,29 @@ void Render(std::vector<T>& v)
         cout << v[i] << ",";
     }
     cout << v[vsize - 1];
+}
+//render vector
+template<typename T>
+void RenderL(const std::vector<T>& v)
+{
 
+    int vsize = v.size();
+    if (vsize == 0)
+    {
+        cout << "null";
+        return;
+    }
+    if (vsize < 2)
+    {
+        cout << v[0];
+        return;
+    }
+    for (int i = 0; i < vsize - 1; i++)
+    {
+        cout << v[i] << ",";
+    }
+    cout << v[vsize - 1];
+    cout << endl;
 }
 //calcaulte delta to vector
 template<typename T>
@@ -159,7 +181,7 @@ bool Add(vector<T>& set, vector<T>& add)
 
 //add set to vector
 template<typename T>
-vector<T> Accumulate(vector<T>& set)
+vector<T> Accumulate(const vector<T>& set)
 {
     T acc = 0; vector<T> accvec;
     size_t set_size = set.size();
@@ -203,3 +225,5 @@ vector<T> FindFragments(vector<T>& set)
     }
     return f;
 }
+
+bool GenerateSequence(int n, int m, vector<int>& v, const vector<int>& en);
